@@ -37,4 +37,4 @@
 
 
 ## 📢 项目信息
-- 📥 基于[jichangee/chrome-chanding](https://github.com/jichangee/chrome-chanding)项目重构，感谢原作者的开源贡献！
+- 📥 基于[jichangee/chrome-chanding](https://github.com/jichangee/chrome-chanding)项目修改开发，感谢原作者的开源贡献！
