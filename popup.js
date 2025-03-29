@@ -1,7 +1,3 @@
-// Copyright (c) 2012 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 'use strict';
 
 $(() => {
@@ -31,9 +27,9 @@ $(() => {
     $('#upload-rules').click();
   });
 
-  // 新增官网按钮跳转逻辑
+  // 官网按钮跳转逻辑
   $('#webhome').click(() => {
-    window.open('https://www.innofree.top', '_blank');
+    window.open('https://github.com/QsSama-W/Web-blocking', '_blank');
   });
 
   // 监听文件选择事件
@@ -44,7 +40,7 @@ let force = false;
 
 // force
 /**
- * 检测是否需要强制开启禅定
+ * 检测是否锁定
  */
 function checkForce() {
   chrome.storage.local.get(['force'], (res) => {
@@ -170,7 +166,7 @@ const blackListHandler = {
   }
 };
 
-// 新增应急解锁函数
+// 解锁函数
 function emergencyUnlock() {
   if (confirm('确定要进行解锁吗？')) {
     chrome.storage.local.set({
