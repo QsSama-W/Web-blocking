@@ -16,7 +16,7 @@ $(() => {
   $('#force').click(onForce);
   checkForce();
 
-  // 绑定应急解锁按钮点击事件
+  // 解锁按钮点击事件
   $('#emergency-unlock').click(emergencyUnlock);
 
   // 绑定下载规则按钮点击事件
@@ -50,7 +50,7 @@ function checkForce() {
       $('#add').addClass('off');
       $('#list li .close').hide();
     } else {
-      // 不在强制状态
+      // 不在锁定状态
       chrome.storage.local.set({
         force: false
       });
