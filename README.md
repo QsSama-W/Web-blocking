@@ -1,4 +1,4 @@
-# Web-Blocking - 网站屏蔽工具  
+# Web-Blocking - 网站屏蔽工具【Chrome浏览器插件】
 🚫 屏蔽你不想看到的网站
 
 ![项目截图](https://github.com/QsSama-W/Web-blocking/blob/main/%E6%95%88%E6%9E%9C%E5%9B%BE.png)  
