@@ -1,6 +1,8 @@
 # Web-Blocking - 网站屏蔽工具【Chrome浏览器插件】
 🚫 屏蔽你不想看到的网站
 
+**📱 界面预览**  
+
 ![项目截图](https://github.com/QsSama-W/Web-blocking/blob/main/%E6%95%88%E6%9E%9C%E5%9B%BE.png)  
 
 
@@ -20,10 +22,13 @@
    - 支持批量导入JSON规则文件  
 
 
-## 🚀 浏览器支持
-- ✔️ Chromium内核浏览器
-- ❌ Firefox浏览器
-- ❌ Safari浏览器
+## 🌐 浏览器兼容性支持
+| 浏览器       | 支持状态 | 版本要求       |
+|--------------|----------|----------------|
+| Google Chrome | ✅ | 使用最新版本 |
+| Microsoft Edge | ✅ | 使用最新版本 |
+| Firefox      | ❌ | 不支持 |
+| Safari       | ❌ | 不支持 |
 
 ## ⬇️ 下载地址
 -  GitHub下载👉[Web-blocking](https://github.com/user-attachments/files/19516315/Web-blocking.zip)👈
@@ -31,5 +36,5 @@
 -  蓝奏云下载👉[Web-blocking](https://wwls.lanzoue.com/ijWTZ2s1a7ba)👈
 
 
-## 📢 项目信息  
-- 📥 原项目地址：[jichangee/chrome-chanding](https://github.com/jichangee/chrome-chanding)
+## 📢 项目信息
+- 📥 基于[jichangee/chrome-chanding](https://github.com/jichangee/chrome-chanding)项目重构，感谢原作者的开源贡献！
