@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="jquery.min.js"></script>
+  <script src="popup.js"></script>
+  <style>
+    /* 全局样式 */
+    body {
+      margin: 0;
+      padding: 16px;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      width: 472px;
+    }
+
+    button {
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button.off {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    button.off:hover {
+      background-color: #ccc;
+    }
+
+    .title {
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    hr {
+      margin: 16px 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    /* URL 输入部分 */
+    .form {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    #url {
+      flex: 1;
+      height: 32px;
+      line-height: 32px;
+      margin-right: 10px;
+      font-size: 14px;
+      padding: 0 8px;
+      outline: none;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    #list {
+      padding: 0;
+      list-style-type: none;
+      margin: 0;
+    }
+
+    #list li {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 24px;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 8px;
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #list li:hover {
+      background-color: #e9f6ff;
+    }
+
+    #list li:hover .close {
+      display: block;
+    }
+
+    #list li .close {
+      display: none;
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      background-color: #dc3545;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+    }
+
+    #list li .close:before,
+    #list li .close:after {
+      content: "";
+      height: 2px;
+      width: 10px;
+      position: absolute;
+      left: 3px;
+      top: 7px;
+      background-color: white;
+    }
+
+    #list li .close:before {
+      transform: rotate(45deg);
+    }
+
+    #list li .close:after {
+      transform: rotate(-45deg);
+    }
+
+    #list li .close:hover {
+      background-color: #bd2130;
+    }
+
+    /* 锁定和解锁部分 */
+    .lock-unlock-container {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    /* 上传和下载部分 */
+    .upload-download-container {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    #upload-rules {
+      display: none;
+    }
+
+    /* 提示信息 */
+    #forceTip {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <hr>
+  <div class="lock-unlock-container">
+    <button id="force">点击锁定</button>
+    <button id="emergency-unlock">点击解锁</button>
+    <button id="download-rules">下载规则</button>
+    <input type="file" id="upload-rules" style="display: none;">
+    <button id="trigger-upload">上传规则</button>
+    <button id="webhome">官网</button>
+  </div>
+  <hr>
+  <div class="form-container">
+    <p class="title">输入需要屏蔽的网址</p>
+    <div class="form"><input type="text" id="url"><button id="add">添加</button></div>
+    <ul id="list"></ul>
+  </div>
+</body>
+
+</html>
